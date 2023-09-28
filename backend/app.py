@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Body, Depends
+from fastapi import FastAPI, HTTPException, Depends
 from pymongo import MongoClient
 from argon2 import PasswordHasher, exceptions
 from pydantic import BaseModel
@@ -38,7 +38,7 @@ def read_root():
     return "Server is running"
 
 
-@app.post("/create_account")
+@app.post("/signup")
 def create_user_account(user: UserInCreate):
     user_data = {
         "username" : user.username,
@@ -110,7 +110,7 @@ def decode_token(token: str):
     except JWTError:
         return None
 
-@app.get("/protected-data")
+@app.get("/protected-data", include_in_schema=False)
 def protected_data(current_user_token: str = Depends(oauth2_scheme)):
     current_user_email = decode_token(current_user_token)
 
