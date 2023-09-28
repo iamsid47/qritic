@@ -22,5 +22,15 @@ def read_root():
 
 
 @app.post("/create_account")
-def create_user_account():
-    return "X"
+def create_user_account(user: User):
+    user_data = {
+        "username" : user.username,
+        "email": user.email,
+        "password": user.password,
+        "company": user.company
+    }
+
+    result = collection.insert_one(user_data)
+
+    if result.inserted_id:
+        return {"message": ""}
