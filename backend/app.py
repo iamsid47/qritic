@@ -5,6 +5,7 @@ from pydantic import BaseModel
 from jose import jwt, JWTError
 from datetime import datetime, timedelta
 from decouple import config
+import json
 
 
 SECRET_KEY = config("SECRET_KEY")
@@ -51,7 +52,15 @@ def create_user_account(user: UserInCreate):
     result = collection.insert_one(user_data)
 
     if result.inserted_id:
-        return {"message": "User created successfully", "userID": str(result.inserted_id)}
+        user_details = collection.find_one({"email": user.email})
+        return {
+            "message": "User created successfully",
+            "userID": str(result.inserted_id),
+            "email": user_details["email"],
+            "username": user_details["username"],
+            "company": user_details["company"]
+        }
+    
     else:
         raise HTTPException(status_code=500, detail="Failed to create user")
     
@@ -74,19 +83,20 @@ def login(user_data: UserLogin):
     user = collection.find_one({"email": user_data.email})
     
     if user is None:
-        raise HTTPException(status_code=400, detail="Invalid credentials")
+        raise HTTPException(status_code=400, detail="No such user")
 
     ph = PasswordHasher()
     
     try:
-        if not ph.verify(user_data.password, user["password"]):
-            raise HTTPException(status_code=400, detail="Invalid credentials")
+        if not ph.verify(user["password"], user_data.password):
+            raise HTTPException(status_code=400, detail="Wrong Password")
     except exceptions.InvalidHash:
-        raise HTTPException(status_code=400, detail="Invalid credentials")
+        raise HTTPException(status_code=400, detail="Bad HASH")
 
     access_token = create_access_token(data={"sub": user["email"]})
 
     return {"access_token": access_token, "token_type": "bearer"}
+
 
 
 
