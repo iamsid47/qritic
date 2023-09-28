@@ -5,8 +5,6 @@ from pydantic import BaseModel
 from jose import jwt, JWTError
 from datetime import datetime, timedelta
 from decouple import config
-import json
-
 
 SECRET_KEY = config("SECRET_KEY")
 ALGORITHM = config("ALGORITHM")
@@ -105,6 +103,30 @@ from typing import Optional
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
+def decode_token(token: str):
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        return payload["sub"]
+    except JWTError:
+        return None
+
 @app.get("/protected-data")
-def protected_data(current_user: str = Depends(oauth2_scheme)):
-    return {"message": "This is protected data.", "user": current_user}
+def protected_data(current_user_token: str = Depends(oauth2_scheme)):
+    current_user_email = decode_token(current_user_token)
+
+    if current_user_email is None:
+        raise HTTPException(status_code=401, detail="Invalid token")
+
+    user_data = collection.find_one({"email": current_user_email})
+
+    if user_data is None:
+        raise HTTPException(status_code=404, detail="User not found")
+
+    return {
+        "message": "Accessing Protected Data",
+        "user": {
+            "username": user_data["username"],
+            "email": user_data["email"],
+            "company": user_data["company"]
+        }
+    }
