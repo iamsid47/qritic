@@ -5,6 +5,7 @@ import { reqURL } from "../../constants";
 import { useAuth } from "./AuthContext";
 import { useNavigate } from "react-router-dom";
 import "../../Global.css";
+import Footer from "../Common/Footer";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -26,7 +27,7 @@ const Login = () => {
       const userData = response.data.userData;
 
       login(userData, receivedAccessToken);
-      navigate("/");
+      navigate("/dashboard");
 
       console.log(response.data);
       console.log("UserEmail: ", response.data.userData.userEmail);
@@ -108,6 +109,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </section>
   );
 };

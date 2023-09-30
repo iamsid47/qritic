@@ -5,6 +5,7 @@ import { reqURL } from "../../constants";
 import "../../Global.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Footer from "../Common/Footer";
 
 const Signup = () => {
   const { user, logout, login } = useAuth();
@@ -186,6 +187,7 @@ const Signup = () => {
           </h1>
         )}
       </div>
+      <Footer />
     </section>
   );
 };
