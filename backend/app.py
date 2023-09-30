@@ -36,13 +36,15 @@ class UserInCreate(BaseModel):
     email: str
     password: str
     company: str
+    jobTitle: str
 
 class User:
-    def __init__(self, username, email, password, company):
+    def __init__(self, username, email, password, company, jobTitle):
         self.username = username
         self.email = email
         self.password_hash = self.hash_password(password)
         self.company = company
+        self.jobTitle = jobTitle
     
     def hash_password(self, password):
         ph = PasswordHasher()
@@ -59,8 +61,9 @@ def create_user_account(user: UserInCreate):
     user_data = {
         "username" : user.username,
         "email": user.email,
-        "password": User(user.username, user.email, user.password, user.company).password_hash,
-        "company": user.company
+        "password": User(user.username, user.email, user.password, user.company, user.jobTitle).password_hash,
+        "company": user.company,
+        "jobTitle": user.jobTitle
     }
 
     result = collection.insert_one(user_data)
@@ -72,7 +75,8 @@ def create_user_account(user: UserInCreate):
             "userID": str(result.inserted_id),
             "email": user_details["email"],
             "username": user_details["username"],
-            "company": user_details["company"]
+            "company": user_details["company"],
+            "jobTitle": user_details["jobTitle"]
         }
     
     else:
@@ -116,6 +120,7 @@ def login(user_data: UserLogin):
             "userEmail": user["email"],
             "userCompany": user["company"],
             "userName": user["username"],
+            "jobTitle": user["jobTitle"],
         }
         }
 
