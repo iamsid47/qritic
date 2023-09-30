@@ -4,6 +4,7 @@ import axios from "axios";
 import { reqURL } from "../../constants";
 import { useAuth } from "./AuthContext";
 import { useNavigate } from "react-router-dom";
+import "../../Global.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -44,7 +45,7 @@ const Login = () => {
         >
           Log in to your account
         </a>
-        <div className="w-full rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700">
+        <div className="w-full rounded shadow border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
               <div>
@@ -60,7 +61,7 @@ const Login = () => {
                   id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="border sm:text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  className="border sm:text-sm rounded block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   placeholder="name@company.com"
                   required=""
                 />
@@ -79,7 +80,7 @@ const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="border sm:text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  className="border sm:text-sm rounded block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   required=""
                 />
               </div>
@@ -91,10 +92,7 @@ const Login = () => {
                   Forgot password?
                 </a>
               </div>
-              <button
-                type="submit"
-                className="w-full text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-              >
+              <button type="submit" className="w-full primarybtn">
                 Sign in
               </button>
               <p className="text-sm font-light text-white">

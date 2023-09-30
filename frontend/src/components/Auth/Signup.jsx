@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../Common/Navbar";
 import { useAuth } from "./AuthContext";
+import "../../Global.css";
 
 const Signup = () => {
   const { user } = useAuth();
@@ -15,7 +16,7 @@ const Signup = () => {
         >
           Register your account
         </a>
-        <div className="w-full  rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700">
+        <div className="w-full  rounded shadow border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <form className="space-y-4 md:space-y-6" onSubmit={<></>}>
               <div>
@@ -29,7 +30,7 @@ const Signup = () => {
                   type="text"
                   name="name"
                   id="name"
-                  className=" border   sm:text-sm rounded-lg   block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  className=" border   sm:text-sm rounded   block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   placeholder="Jim Halpert"
                   required=""
                 />
@@ -45,7 +46,7 @@ const Signup = () => {
                   type="email"
                   name="email"
                   id="email"
-                  className=" border   sm:text-sm rounded-lg   block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  className=" border   sm:text-sm rounded   block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   placeholder="jimothy@dundermifflin.com"
                   required=""
                 />
@@ -62,7 +63,7 @@ const Signup = () => {
                   name="password"
                   id="password"
                   placeholder="••••••••"
-                  className=" border  sm:text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  className=" border  sm:text-sm rounded  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   required=""
                 />
               </div>
@@ -78,14 +79,11 @@ const Signup = () => {
                   name="cpassword"
                   id="cpassword"
                   placeholder="••••••••"
-                  className=" border  sm:text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  className=" border  sm:text-sm rounded  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   required=""
                 />
               </div>
-              <button
-                type="submit"
-                className="w-full text-white focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-              >
+              <button type="submit" className="w-full primarybtn">
                 Register
               </button>
               <p className="text-sm font-light text-white">
