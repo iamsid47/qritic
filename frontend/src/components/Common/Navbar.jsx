@@ -69,12 +69,12 @@ const Navbar = () => {
             } w-full md:block md:w-auto`}
             id="navbar-default"
           >
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-gray-800 md:bg-transparent border-gray-700">
+            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:items-center border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-gray-800 md:bg-transparent border-gray-700">
               {navItems.map((item, index) => (
                 <li key={index}>
                   <a
                     href={item.link}
-                    className="block py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-white md:hover:text-blue-500 hover-bg-gray-700 hover:text-white md:hover:bg-transparent hover:bg-blue-600"
+                    className="block py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-white md:hover:text-blue-500 hover-bg-gray-700 hover:text-white md:hover:bg-transparent hover:bg-blue-600 "
                   >
                     {item.text}
                   </a>
@@ -85,7 +85,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="/dashboard"
-                    className="block py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:p-0 text-white md:text-blue-500 hover:bg-blue-600"
+                    className="block py-2 md:px-4 md:py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-white hover-bg-gray-700 hover:text-white md:hover:bg-transparent hover:bg-blue-600 md:bg-blue-600 md:hover:bg-blue-800 md:hover:text-white transition duration-300"
                   >
                     Dashboard
                   </a>
@@ -95,7 +95,7 @@ const Navbar = () => {
                   <li>
                     <a
                       href="/login"
-                      className="block py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-white md:hover:text-blue-500 hover-bg-gray-700 hover:text-white md:hover:bg-transparent hover:bg-blue-600"
+                      className="block py-2 md:px-4 md:py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-white md:hover:text-blue-500 hover-bg-gray-700 hover:text-white md:hover:bg-transparent hover:bg-blue-600 md:bg-white md:text-black md:hover:bg-gray-100 transition duration-300"
                     >
                       Login
                     </a>
@@ -103,7 +103,7 @@ const Navbar = () => {
                   <li>
                     <a
                       href="/signup"
-                      className="block py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-white md:hover:text-blue-500 hover-bg-gray-700 hover:text-white md:hover:bg-transparent hover:bg-blue-600"
+                      className="block py-2 md:px-4 md:py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-white hover-bg-gray-700 hover:text-white md:hover:bg-transparent hover:bg-blue-600 md:bg-blue-600 md:hover:bg-blue-800 md:hover:text-white transition duration-300"
                     >
                       Sign Up
                     </a>
