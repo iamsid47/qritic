@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useAuth } from "../Auth/AuthContext";
 
 const navItems = [
   { text: "Home", link: "/" },
@@ -10,6 +11,8 @@ const navItems = [
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const { user } = useAuth();
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -59,6 +62,7 @@ const Navbar = () => {
               />
             </svg>
           </button>
+
           <div
             className={`${
               isNavOpen ? "block" : "hidden"
@@ -70,12 +74,42 @@ const Navbar = () => {
                 <li key={index}>
                   <a
                     href={item.link}
-                    className="block py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-white md:hover:text-blue-500 hover-bg-gray-700 hover:text-white md:hover:bg-transparent"
+                    className="block py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-white md:hover:text-blue-500 hover-bg-gray-700 hover:text-white md:hover:bg-transparent hover:bg-blue-600"
                   >
                     {item.text}
                   </a>
                 </li>
               ))}
+
+              {user ? (
+                <li>
+                  <a
+                    href="/dashboard"
+                    className="block py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:p-0 text-white md:text-blue-500 hover:bg-blue-600"
+                  >
+                    Dashboard
+                  </a>
+                </li>
+              ) : (
+                <>
+                  <li>
+                    <a
+                      href="/login"
+                      className="block py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-white md:hover:text-blue-500 hover-bg-gray-700 hover:text-white md:hover:bg-transparent hover:bg-blue-600"
+                    >
+                      Login
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/signup"
+                      className="block py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-white md:hover:text-blue-500 hover-bg-gray-700 hover:text-white md:hover:bg-transparent hover:bg-blue-600"
+                    >
+                      Sign Up
+                    </a>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
         </div>
