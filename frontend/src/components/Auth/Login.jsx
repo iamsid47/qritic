@@ -37,7 +37,7 @@ const Login = () => {
   return (
     <section className="bg-gray-900">
       <Navbar />
-      <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 -mt-8">
+      <div className="flex flex-col items-center min-h-screen justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 -mt-8">
         <a
           href="/"
           className="flex items-center mb-6 text-3xl font-semibold text-white"

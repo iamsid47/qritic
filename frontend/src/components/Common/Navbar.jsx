@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useAuth } from "../Auth/AuthContext";
+import "../../Global.css";
 
 const navItems = [
   { text: "Home", link: "/" },
@@ -83,28 +84,19 @@ const Navbar = () => {
 
               {user ? (
                 <li>
-                  <a
-                    href="/dashboard"
-                    className="block py-2 md:px-4 md:py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-white hover-bg-gray-700 hover:text-white md:hover:bg-transparent hover:bg-blue-600 md:bg-blue-600 md:hover:bg-blue-800 md:hover:text-white transition duration-300"
-                  >
+                  <a href="/dashboard" className="primarybtn">
                     Dashboard
                   </a>
                 </li>
               ) : (
                 <>
                   <li>
-                    <a
-                      href="/login"
-                      className="block py-2 md:px-4 md:py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-white md:hover:text-blue-500 hover-bg-gray-700 hover:text-white md:hover:bg-transparent hover:bg-blue-600 md:bg-white md:text-black md:hover:bg-gray-100 transition duration-300"
-                    >
+                    <a href="/login" className="secondarybtn">
                       Login
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="/signup"
-                      className="block py-2 md:px-4 md:py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-white hover-bg-gray-700 hover:text-white md:hover:bg-transparent hover:bg-blue-600 md:bg-blue-600 md:hover:bg-blue-800 md:hover:text-white transition duration-300"
-                    >
+                    <a href="/signup" className="primarybtn">
                       Sign Up
                     </a>
                   </li>
