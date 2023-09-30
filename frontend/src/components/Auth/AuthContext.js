@@ -10,7 +10,6 @@ export const AuthProvider = ({ children }) => {
     setUser(userData);
     setAccessToken(token);
 
-    // Store the access token and user data as strings
     sessionStorage.setItem("accessToken", token);
     sessionStorage.setItem("userData", JSON.stringify(userData));
   };

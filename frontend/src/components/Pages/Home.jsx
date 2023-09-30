@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../Common/Navbar";
 import { useAuth } from "../Auth/AuthContext";
 
 const Home = () => {
@@ -9,7 +10,8 @@ const Home = () => {
   };
   return (
     <div className="">
-      <p className="text-center text-8xl">HomePage</p>
+      <Navbar />
+      <p className="text-center text-8xl py-4">HomePage</p>
       <br />
       {user ? (
         <>

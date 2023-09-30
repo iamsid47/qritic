@@ -1,7 +1,10 @@
 import React from "react";
 import Navbar from "../Common/Navbar";
+import { useAuth } from "./AuthContext";
 
 const Signup = () => {
+  const { user } = useAuth();
+
   return (
     <section class=" bg-gray-900">
       <Navbar />
