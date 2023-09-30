@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException, Depends
+from fastapi.middleware.cors import CORSMiddleware
 from pymongo import MongoClient
 from argon2 import PasswordHasher, exceptions
 from pydantic import BaseModel
@@ -10,6 +11,21 @@ SECRET_KEY = config("SECRET_KEY")
 ALGORITHM = config("ALGORITHM")
 
 app = FastAPI()
+
+origins = [
+    "http://localhost",
+    "http://localhost:3000", 
+    "*"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
+    allow_headers=["*"],
+)
+
 
 client = MongoClient(config("DATABASE_URL"))
 db = client[config("DATABASE_NAME")]
@@ -93,7 +109,15 @@ def login(user_data: UserLogin):
 
     access_token = create_access_token(data={"sub": user["email"]})
 
-    return {"access_token": access_token, "token_type": "bearer"}
+    return {
+        "access_token": access_token,
+        "token_type": "bearer",
+        "userData": {
+            "userEmail": user["email"],
+            "userCompany": user["company"],
+            "userName": user["username"],
+        }
+        }
 
 
 

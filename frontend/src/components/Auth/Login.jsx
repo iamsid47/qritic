@@ -1,24 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../Common/Navbar";
+import axios from "axios";
+import { reqURL } from "../../constants";
+import { useAuth } from "./AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const { login } = useAuth();
+
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post(`${reqURL}login`, {
+        email: email,
+        password: password,
+      });
+      const receivedAccessToken = response.data.access_token;
+      const userData = response.data.userData;
+
+      login(userData, receivedAccessToken);
+      navigate("/");
+
+      console.log(response.data);
+      console.log("UserEmail: ", response.data.userData.userEmail);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
-    <section class=" bg-gray-900">
+    <section className="bg-gray-900">
       <Navbar />
-      <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 -mt-8">
+      <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 -mt-8">
         <a
           href="/"
-          class="flex items-center mb-6 text-3xl font-semibold  text-white"
+          className="flex items-center mb-6 text-3xl font-semibold text-white"
         >
           Log in to your account
         </a>
-        <div class="w-full  rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700">
-          <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-            <form class="space-y-4 md:space-y-6" action="#">
+        <div className="w-full rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700">
+          <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
+            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
               <div>
                 <label
-                  for="email"
-                  class="block mb-2 text-sm font-medium  text-white"
+                  htmlFor="email"
+                  className="block mb-2 text-sm font-medium text-white"
                 >
                   Your email
                 </label>
@@ -26,15 +58,17 @@ const Login = () => {
                   type="email"
                   name="email"
                   id="email"
-                  class=" border   sm:text-sm rounded-lg   block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="border sm:text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   placeholder="name@company.com"
                   required=""
                 />
               </div>
               <div>
                 <label
-                  for="password"
-                  class="block mb-2 text-sm font-medium  text-white"
+                  htmlFor="password"
+                  className="block mb-2 text-sm font-medium text-white"
                 >
                   Password
                 </label>
@@ -42,30 +76,32 @@ const Login = () => {
                   type="password"
                   name="password"
                   id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
-                  class=" border  sm:text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  className="border sm:text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                   required=""
                 />
               </div>
-              <div class="flex items-center justify-between my-2">
+              <div className="flex items-center justify-between my-2">
                 <a
-                  href="/"
-                  class="text-sm font-medium  hover:underline text-blue-500"
+                  href="/forgot-password"
+                  className="text-sm font-medium hover:underline text-blue-500"
                 >
                   Forgot password?
                 </a>
               </div>
               <button
                 type="submit"
-                class="w-full text-white  focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+                className="w-full text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               >
                 Sign in
               </button>
-              <p class="text-sm font-light text-white">
+              <p className="text-sm font-light text-white">
                 Don’t have an account yet?{" "}
                 <a
                   href="/signup"
-                  class="font-medium  hover:underline text-blue-500"
+                  className="font-medium hover:underline text-blue-500"
                 >
                   Sign up
                 </a>
