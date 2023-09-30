@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Common/Navbar";
 
-const Login = () => {
+const Signup = () => {
   return (
     <section class=" bg-gray-900">
       <Navbar />
@@ -10,11 +10,27 @@ const Login = () => {
           href="/"
           class="flex items-center mb-6 text-3xl font-semibold  text-white"
         >
-          Log in to your account
+          Register your account
         </a>
         <div class="w-full  rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700">
           <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-            <form class="space-y-4 md:space-y-6" action="#">
+            <form class="space-y-4 md:space-y-6" onSubmit={<></>}>
+              <div>
+                <label
+                  htmlFor="name"
+                  class="block mb-2 text-sm font-medium  text-white"
+                >
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class=" border   sm:text-sm rounded-lg   block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Jim Halpert"
+                  required=""
+                />
+              </div>
               <div>
                 <label
                   for="email"
@@ -27,7 +43,7 @@ const Login = () => {
                   name="email"
                   id="email"
                   class=" border   sm:text-sm rounded-lg   block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="name@company.com"
+                  placeholder="jimothy@dundermifflin.com"
                   required=""
                 />
               </div>
@@ -47,27 +63,35 @@ const Login = () => {
                   required=""
                 />
               </div>
-              <div class="flex items-center justify-between my-2">
-                <a
-                  href="/"
-                  class="text-sm font-medium  hover:underline text-blue-500"
+              <div>
+                <label
+                  for="cpassword"
+                  class="block mb-2 text-sm font-medium  text-white"
                 >
-                  Forgot password?
-                </a>
+                  Confirm Password
+                </label>
+                <input
+                  type="password"
+                  name="cpassword"
+                  id="cpassword"
+                  placeholder="••••••••"
+                  class=" border  sm:text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  required=""
+                />
               </div>
               <button
                 type="submit"
                 class="w-full text-white  focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               >
-                Sign in
+                Register
               </button>
               <p class="text-sm font-light text-white">
-                Don’t have an account yet?{" "}
+                Already have an account yet?{" "}
                 <a
-                  href="/signup"
+                  href="/login"
                   class="font-medium  hover:underline text-blue-500"
                 >
-                  Sign up
+                  Log in
                 </a>
               </p>
             </form>
@@ -78,4 +102,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;

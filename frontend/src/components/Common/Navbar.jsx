@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <section>
-      <nav class=" border-gray-200 bg-gray-900">
+      <nav class=" border-gray-200 bg-gray-800">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="/" class="flex items-center">
             <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">
@@ -35,7 +35,7 @@ const Navbar = () => {
             </svg>
           </button>
           <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border  rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  bg-gray-800 md:bg-gray-900 border-gray-700">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border  rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  bg-gray-800 md:bg-gray-800 border-gray-700">
               <li>
                 <a
                   href="/"
