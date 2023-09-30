@@ -1,86 +1,95 @@
 import React from "react";
+import Navbar from "../Common/Navbar";
 
 const Login = () => {
   return (
-    <section>
-      <nav class=" border-gray-200 bg-gray-900">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="/" class="flex items-center">
-            <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">
-              Qritic
-            </span>
-          </a>
-          <button
-            data-collapse-toggle="navbar-default"
-            type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden:ring-2 focusay-400 hover:bg-gray-700 focus:ring-gray-600"
-            aria-controls="navbar-default"
-            aria-expanded="false"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border  rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  bg-gray-800 md:bg-gray-900 border-gray-700">
-              <li>
+    <section class=" bg-gray-900">
+      <Navbar />
+      <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <a
+          href="/"
+          class="flex items-center mb-6 text-3xl font-semibold  text-white"
+        >
+          Log in to your account
+        </a>
+        <div class="w-full  rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700">
+          <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+            <form class="space-y-4 md:space-y-6" action="#">
+              <div>
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium  text-white"
+                >
+                  Your email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class=" border   sm:text-sm rounded-lg   block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="name@company.com"
+                  required=""
+                />
+              </div>
+              <div>
+                <label
+                  for="password"
+                  class="block mb-2 text-sm font-medium  text-white"
+                >
+                  Password
+                </label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="••••••••"
+                  class=" border  sm:text-sm rounded-lg  block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                  required=""
+                />
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-start">
+                  <div class="flex items-center h-5">
+                    <input
+                      id="remember"
+                      aria-describedby="remember"
+                      type="checkbox"
+                      class="w-4 h-4 border  rounded focus:ring-3  bg-gray-700 border-gray-600 focus:ring-blue-600 ring-offset-gray-800"
+                      required=""
+                    />
+                  </div>
+                  <div class="ml-3 text-sm">
+                    <label for="remember" class=" text-gray-300">
+                      Remember me
+                    </label>
+                  </div>
+                </div>
                 <a
                   href="/"
-                  class="block py-2 pl-3 pr-4  bg-blue-700 rounded md:bg-transparent  md:p-0 text-white md:text-blue-500"
-                  aria-current="page"
+                  class="text-sm font-medium  hover:underline text-blue-500"
                 >
-                  Home
+                  Forgot password?
                 </a>
-              </li>
-              <li>
+              </div>
+              <button
+                type="submit"
+                class="w-full text-white  focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+              >
+                Sign in
+              </button>
+              <p class="text-sm font-light text-white">
+                Don’t have an account yet?{" "}
                 <a
-                  href="/"
-                  class="block py-2 pl-3 pr-4  rounded   md:border-0  md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent"
+                  href="/signup"
+                  class="font-medium  hover:underline text-blue-500"
                 >
-                  About
+                  Sign up
                 </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  class="block py-2 pl-3 pr-4  rounded   md:border-0  md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent"
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  class="block py-2 pl-3 pr-4  rounded   md:border-0  md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent"
-                >
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  class="block py-2 pl-3 pr-4  rounded   md:border-0  md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
+              </p>
+            </form>
           </div>
         </div>
-      </nav>
+      </div>
     </section>
   );
 };
