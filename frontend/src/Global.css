@@ -1,6 +1,6 @@
 .primarybtn {
-  @apply block py-2 md:px-4 md:py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-white hover:text-white md:hover:bg-transparent hover:bg-blue-600 md:bg-blue-600 md:hover:bg-blue-800 md:hover:text-white transition duration-300;
+  @apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded  px-5 py-2.5  mb-2 dark:bg-blue-600 transition duration-300;
 }
 .secondarybtn {
-  @apply block py-2 md:px-4 md:py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-white md:hover:text-blue-500 hover:text-white md:hover:bg-transparent hover:bg-blue-600 md:bg-white md:text-black md:hover:bg-gray-100 transition duration-300;
+  @apply py-2.5 px-5  mb-2  font-medium text-gray-900 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 transition duration-300;
 }

@@ -1,11 +1,12 @@
 import React from "react";
 import Navbar from "../Common/Navbar";
+import Hero from "../Common/Hero";
 
 const Home = () => {
   return (
     <div className="">
       <Navbar />
-      <p className="text-center text-8xl py-4">HomePage</p>
+      <Hero />
     </div>
   );
 };

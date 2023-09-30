@@ -22,9 +22,9 @@ const Navbar = () => {
   return (
     <section>
       <nav className="border-gray-200 bg-gray-800">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-6">
           <a href="/" className="flex items-center">
-            <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
+            <span className="self-center text-3xl font-bold whitespace-nowrap bg-gradient-to-r from-green-300 to-green-400 bg-clip-text text-transparent">
               Qritic
             </span>
           </a>
@@ -91,12 +91,15 @@ const Navbar = () => {
               ) : (
                 <>
                   <li>
-                    <a href="/login" className="secondarybtn">
+                    <a href="/login" className="secondarybtn block md:inline">
                       Login
                     </a>
                   </li>
                   <li>
-                    <a href="/signup" className="primarybtn">
+                    <a
+                      href="/signup"
+                      className="primarybtn md:-ml-3 block md:inline"
+                    >
                       Sign Up
                     </a>
                   </li>
