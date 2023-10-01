@@ -8,6 +8,7 @@ import Account from "./components/Dashboard/Account";
 import Billing from "./components/Dashboard/Billing";
 import History from "./components/Dashboard/History";
 import Contact from "./components/Pages/Contact";
+import Pricing from "./components/Pages/Pricing";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/pricing" element={<Pricing />} />
         <Route path="/dashboard/*" element={<Dash />} />
         <Route path="/dashboard/account" element={<Account />} />
         <Route path="/dashboard/billing" element={<Billing />} />

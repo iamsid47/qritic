@@ -83,7 +83,10 @@ const Navbar = () => {
 
               {user ? (
                 <li>
-                  <a href="/dashboard" className="primarybtn uppercase">
+                  <a
+                    href="/dashboard"
+                    className="primarybtn md:-ml-3 block md:inline uppercase"
+                  >
                     Dashboard
                   </a>
                 </li>
