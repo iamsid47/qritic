@@ -3,11 +3,10 @@ import { useAuth } from "../Auth/AuthContext";
 import "../../Global.css";
 
 const navItems = [
-  { text: "Home", link: "/" },
-  { text: "About", link: "/" },
-  { text: "Services", link: "/" },
-  { text: "Pricing", link: "/" },
-  { text: "Contact", link: "/" },
+  { text: "Why", link: "/why-qritic" },
+  { text: "Playground", link: "/playground" },
+  { text: "Pricing", link: "/pricing" },
+  { text: "Let's Talk", link: "/contact" },
 ];
 
 const Navbar = () => {
@@ -21,10 +20,10 @@ const Navbar = () => {
 
   return (
     <section>
-      <nav className="border-gray-200 bg-gray-800">
+      <nav className="border-gray-200 bg-gray-950">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-6">
           <a href="/" className="flex items-center">
-            <span className="self-center text-3xl font-bold whitespace-nowrap bg-gradient-to-r from-green-300 to-green-400 bg-clip-text text-transparent">
+            <span className="self-center text-3xl font-bold whitespace-nowrap bg-sky-400 bg-clip-text text-transparent">
               Qritic
             </span>
           </a>
@@ -75,7 +74,7 @@ const Navbar = () => {
                 <li key={index}>
                   <a
                     href={item.link}
-                    className="block py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-white md:hover:text-blue-500 hover-bg-gray-700 hover:text-white md:hover:bg-transparent hover:bg-blue-600 "
+                    className="block py-2 pl-3 pr-4 uppercase text-sm rounded md:border-0 md:p-0 text-white md:hover:text-blue-500 hover-bg-gray-700 hover:text-white md:hover:bg-transparent hover:bg-blue-600 "
                   >
                     {item.text}
                   </a>
@@ -84,21 +83,24 @@ const Navbar = () => {
 
               {user ? (
                 <li>
-                  <a href="/dashboard" className="primarybtn">
+                  <a href="/dashboard" className="primarybtn uppercase">
                     Dashboard
                   </a>
                 </li>
               ) : (
                 <>
                   <li>
-                    <a href="/login" className="secondarybtn block md:inline">
+                    <a
+                      href="/login"
+                      className="secondarybtn block md:inline uppercase"
+                    >
                       Login
                     </a>
                   </li>
                   <li>
                     <a
                       href="/signup"
-                      className="primarybtn md:-ml-3 block md:inline"
+                      className="primarybtn md:-ml-3 block md:inline uppercase"
                     >
                       Sign Up
                     </a>

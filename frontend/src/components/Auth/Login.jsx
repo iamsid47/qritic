@@ -40,12 +40,9 @@ const Login = () => {
     <section className="bg-gray-900">
       <Navbar />
       <div className="flex flex-col items-center min-h-screen justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 -mt-8">
-        <a
-          href="/"
-          className="flex items-center mb-6 text-3xl font-semibold text-white"
-        >
+        <h1 className="flex items-center mb-6 text-3xl font-semibold text-white">
           Log in to your account
-        </a>
+        </h1>
         <div className="w-full rounded shadow border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">

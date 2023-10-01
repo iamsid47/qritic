@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import Footer from "../Common/Footer";
 
 const Signup = () => {
-  const { user, logout, login } = useAuth();
+  const { user, logout } = useAuth();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

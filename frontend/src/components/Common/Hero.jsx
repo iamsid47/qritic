@@ -1,22 +1,38 @@
 import React from "react";
+import bgCover from "../assets/bg-cover.jpg";
 import "../../Global.css";
 
 const Hero = () => {
+  const backgroundStyle = {
+    backgroundImage: `url(${bgCover})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    minHeight: "100vh",
+  };
+
   return (
-    <div class="bg-white">
-      <section class="bg-[#FCF8F1] bg-opacity-30 py-10 sm:py-16 lg:py-24 mx-3 md:mx-0">
-        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div class="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
+    <div
+      className="flex items-center mx-auto px-4 md:px-0 md:block md:mx-0 min-h-screen"
+      style={backgroundStyle}
+    >
+      <section className=" py-10 sm:py-16 lg:py-32 mx-3 md:mx-0">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
             <div>
-              <p class="text-base font-semibold tracking-tight text-blue-600 uppercase">
+              <a
+                href="/playground"
+                className="text-base font-semibold tracking-tight text-black hover:text-blue-600 uppercase rounded-full px-4 py-3 bg-white hover:bg-gray-200 inline transition duration-300"
+              >
                 Try Playground &rarr;
-              </p>
-              <h1 class="mt-4  font-bold text-black lg:mt-8 text-4xl md:text-6xl  tracking-tighter">
+              </a>
+              <h1 className="mt-4  font-bold text-white lg:mt-8 text-4xl md:text-7xl tracking-tight">
                 Recruiters receive{" "}
-                <span className="underline font-extrabold">thousands</span> of
-                resumes everyday
+                <span className="underline underline-offset-8 font-extrabold">
+                  thousands
+                </span>{" "}
+                of resumes everyday
               </h1>
-              <p class="my-6 text-base text-black lg:mt-8 sm:text-xl max-w-md">
+              <p className="mt-6 mb-10 text-base text-white lg:mt-8 sm:text-xl max-w-md">
                 We're stepping in to save you a{" "}
                 <span className="underline font-semibold italic">
                   hell lot of time
@@ -27,15 +43,15 @@ const Hero = () => {
               <a
                 href="/signup"
                 title=""
-                class="primarybtn text-xl"
+                className="primarybtn text-xl"
                 role="button"
               >
-                Join for free &rarr;
+                Get Started &rarr;
               </a>
 
-              <p class="mt-6 text-gray-600">
+              <p className="mt-24 text-gray-300">
                 Already joined us?{" "}
-                <a href="/login" title="" class="text-blue-600 font-bold">
+                <a href="/login" title="" className="text-blue-600 font-bold">
                   Log in
                 </a>
               </p>
@@ -43,7 +59,7 @@ const Hero = () => {
 
             <div>
               <img
-                class="w-11/12"
+                className="w-11/12"
                 src="https://cdn.rareblocks.xyz/collection/celebration/images/hero/1/hero-img.png"
                 alt=""
               />

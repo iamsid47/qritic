@@ -2,27 +2,29 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="px-4 divide-y bg-gradient-to-r from-gray-800 to-gray-900 text-gray-100">
-      <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
-        <div className="lg:w-1/3">
+    <footer className="px-4 lg:px-12 mx-12 py-16 divide-y space-y-11 bg-[#222222] text-gray-100 ">
+      <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0 ">
+        <div className="lg:w-1/3 py-5">
           <a
             rel="noopener noreferrer"
             href="/"
             className="flex justify-center space-x-3 lg:justify-start"
           >
-            <span className="self-center text-4xl font-semibold bg-gradient-to-r from-green-300 to-green-400 bg-clip-text text-transparent">
+            <span className="self-center text-4xl md:text-6xl font-semibold bg-sky-400 bg-clip-text text-transparent">
               Qritic
             </span>
           </a>
           <div>
-            <h1 className="py-4 text-xl italic text-gray-500 text-center md:text-left">
+            <h1 className="pt-1.5 text-xl italic text-gray-300 text-center md:text-left">
               Resume ranking for HR nerds
             </h1>
           </div>
         </div>
-        <div className="grid grid-cols-3 text-sm gap-x-3 gap-y-8 lg:w-1/3">
+        <div className="grid grid-cols-3 text-base gap-x-3 gap-y-8 lg:w-1/3">
           <div className="space-y-3">
-            <h3 className="tracki uppercase text-gray-50">Product</h3>
+            <h3 className="uppercase font-bold text-gray-50 text-md">
+              Product
+            </h3>
             <ul className="space-y-1">
               <li>
                 <a
@@ -54,7 +56,9 @@ const Footer = () => {
             </ul>
           </div>
           <div className="space-y-3">
-            <h3 className="tracki uppercase text-gray-50">Company</h3>
+            <h3 className="uppercase font-bold text-gray-50 text-md">
+              Company
+            </h3>
             <ul className="space-y-1">
               <li>
                 <a
@@ -78,7 +82,9 @@ const Footer = () => {
           </div>
 
           <div className="space-y-3">
-            <div className="uppercase text-gray-50">Social media</div>
+            <div className="uppercase font-bold text-gray-50 text-md">
+              Social media
+            </div>
             <div className="flex justify-start space-x-3">
               <a
                 rel="noopener noreferrer"
@@ -128,8 +134,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="py-6 text-sm text-center text-gray-400">
-        &copy; 2023 Kulthe Media. All rights reserved.
+      <div className="py-6 text-sm text-center text-gray-100">
+        &copy; 2023{" "}
+        <span className="underline underline-offset-8">
+          Kulthe Media, Limited
+        </span>
+        . All rights reserved.
       </div>
     </footer>
   );

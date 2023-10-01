@@ -1,5 +1,5 @@
 .primarybtn {
-  @apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded  px-5 py-2.5  mb-2 dark:bg-blue-600 transition duration-300;
+  @apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded  px-4 py-3  mb-2 dark:bg-blue-600 transition duration-300;
 }
 .secondarybtn {
   @apply py-2.5 px-5  mb-2  font-medium text-gray-900 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 transition duration-300;
