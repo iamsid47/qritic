@@ -5,6 +5,8 @@ import Login from "./components/Auth/Login";
 import Signup from "./components/Auth/Signup";
 import Dash from "./components/Dashboard/Dash";
 import Account from "./components/Dashboard/Account";
+import Billing from "./components/Dashboard/Billing";
+import History from "./components/Dashboard/History";
 import Contact from "./components/Pages/Contact";
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard/*" element={<Dash />} />
         <Route path="/dashboard/account" element={<Account />} />
+        <Route path="/dashboard/billing" element={<Billing />} />
+        <Route path="/dashboard/history" element={<History />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
