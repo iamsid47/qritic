@@ -17,21 +17,44 @@ const Account = () => {
     <Layout>
       {user ? (
         <div className="">
-          <div className="">
-            <br />
+          <div className="w-full flex flex-col justify-center items-start px-12 my-12 py-4 border-2 border-gray-300 rounded-xl">
+            <div className="py-2">
+              <label htmlFor="name" className="text-gray-600 uppercase">
+                Client Name
+              </label>
+              <p className="font-bold text-xl">{user.userName}</p>
+            </div>
+            <div className="py-2">
+              <label htmlFor="name" className="text-gray-600 uppercase">
+                Email Address
+              </label>
+              <p className="font-bold text-xl">{user.userEmail}</p>
+            </div>
+            <div className="py-2">
+              <label htmlFor="name" className="text-gray-600 uppercase">
+                Company
+              </label>
+              <p className="font-bold text-xl">{user.userCompany}</p>
+            </div>
+            <div className="py-2">
+              <label htmlFor="name" className="text-gray-600 uppercase">
+                Job Title
+              </label>
+              <p className="font-bold text-xl">{user.jobTitle}</p>
+            </div>
+          </div>
 
-            <>
-              <p>{user.userEmail}</p>
-              <p>{user.userCompany}</p>
-              <p>{user.userName}</p>
-              <p>{user.jobTitle}</p>
-              <button
-                className="px-4 py-2 bg-blue-600 rounded-xl text-white"
-                onClick={handleLogout}
-              >
+          <div className="flex space-x-5">
+            <div>
+              <button className="dangerbtn" onClick={handleLogout}>
                 Logout
               </button>
-            </>
+            </div>
+            <div>
+              <button className="primarybtn" onClick={handleLogout}>
+                Change Password &rarr;
+              </button>
+            </div>
           </div>
         </div>
       ) : (

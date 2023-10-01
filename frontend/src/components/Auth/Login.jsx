@@ -11,6 +11,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const [showErrorMessage, setshowErrorMessage] = useState(false);
   const { login } = useAuth();
 
   const navigate = useNavigate();
@@ -32,14 +33,20 @@ const Login = () => {
       console.log(response.data);
       console.log("UserEmail: ", response.data.userData.userEmail);
     } catch (error) {
-      console.error(error);
+      if (error.response) {
+        setshowErrorMessage(true);
+        console.error("Password does not match, please try again.");
+      } else {
+        setshowErrorMessage(false);
+        console.error(error);
+      }
     }
   };
 
   return (
-    <section className="bg-gray-900">
+    <section className="">
       <Navbar />
-      <div className="flex flex-col items-center min-h-screen justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 -mt-8">
+      <div className="flex flex-col items-center min-h-screen justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 bg-gray-900">
         <h1 className="flex items-center mb-6 text-3xl font-semibold text-white">
           Log in to your account
         </h1>
@@ -93,6 +100,11 @@ const Login = () => {
               <button type="submit" className="w-full primarybtn">
                 Sign in
               </button>
+              {showErrorMessage && (
+                <p className="text-red-500">
+                  Password does not match, please try again.
+                </p>
+              )}
               <p className="text-sm font-light text-white">
                 Don’t have an account yet?{" "}
                 <a

@@ -4,3 +4,7 @@
 .secondarybtn {
   @apply py-2.5 px-5  mb-2  font-medium text-gray-900 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 transition duration-300;
 }
+
+.dangerbtn {
+  @apply text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded  px-4 py-3  mb-2 dark:bg-red-600 transition duration-300;
+}

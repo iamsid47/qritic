@@ -42,7 +42,7 @@ const Signup = () => {
       });
 
       window.alert("Registration Successful!");
-      navigate("/");
+      navigate("/login");
 
       console.log(response.data);
     } catch (error) {
@@ -51,9 +51,9 @@ const Signup = () => {
   };
 
   return (
-    <section className=" bg-gray-900">
+    <section className=" ">
       <Navbar />
-      <div className="flex flex-col items-center justify-center px-6 py-24 mx-auto md:h-screen min-h-screen lg:py-0 md:my-16">
+      <div className="flex flex-col items-center justify-center px-6 py-24 mx-auto md:h-screen min-h-screen lg:py-0 md:py-16 bg-gray-900">
         <h1 className="flex items-center mb-6 text-3xl font-semibold  text-white">
           Register your account
         </h1>

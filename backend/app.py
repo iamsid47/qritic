@@ -110,6 +110,9 @@ def login(user_data: UserLogin):
             raise HTTPException(status_code=400, detail="Wrong Password")
     except exceptions.InvalidHash:
         raise HTTPException(status_code=400, detail="Bad HASH")
+    
+    except exceptions.VerifyMismatchError:
+        raise HTTPException(status_code=400, detail="Password does not match")
 
     access_token = create_access_token(data={"sub": user["email"]})
 
