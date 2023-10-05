@@ -56,14 +56,6 @@ const Hero = () => {
                 </a>
               </p>
             </div>
-
-            <div>
-              <img
-                className="w-11/12"
-                src="https://cdn.rareblocks.xyz/collection/celebration/images/hero/1/hero-img.png"
-                alt=""
-              />
-            </div>
           </div>
         </div>
       </section>

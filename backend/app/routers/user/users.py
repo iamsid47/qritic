@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Depends
+from fastapi import APIRouter, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pymongo import MongoClient
 from argon2 import PasswordHasher, exceptions
@@ -10,22 +10,7 @@ from decouple import config
 SECRET_KEY = config("SECRET_KEY")
 ALGORITHM = config("ALGORITHM")
 
-app = FastAPI()
-
-origins = [
-    "http://localhost",
-    "http://localhost:3000", 
-    "*"
-]
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["GET", "POST", "PUT", "DELETE"],
-    allow_headers=["*"],
-)
-
+router = APIRouter()
 
 client = MongoClient(config("DATABASE_URL"))
 db = client[config("DATABASE_NAME")]
@@ -51,12 +36,12 @@ class User:
         return ph.hash(password)
 
 
-@app.get("/")
+@router.get("/check2")
 def read_root():
     return "Server is running"
 
 
-@app.post("/signup")
+@router.post("/signup")
 def create_user_account(user: UserInCreate):
     user_data = {
         "username" : user.username,
@@ -96,7 +81,7 @@ def create_access_token(data: dict, expires_delta: timedelta = None):
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
 
-@app.post("/login")
+@router.post("/login")
 def login(user_data: UserLogin):
     user = collection.find_one({"email": user_data.email})
     
@@ -142,7 +127,7 @@ def decode_token(token: str):
     except JWTError:
         return None
 
-@app.get("/protected-data", include_in_schema=False)
+@router.get("/protected-data", include_in_schema=False)
 def protected_data(current_user_token: str = Depends(oauth2_scheme)):
     current_user_email = decode_token(current_user_token)
 

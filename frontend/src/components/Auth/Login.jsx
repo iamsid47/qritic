@@ -89,14 +89,14 @@ const Login = () => {
                   required=""
                 />
               </div>
-              <div className="flex items-center justify-between my-2">
+              {/* <div className="flex items-center justify-between my-2">
                 <a
                   href="/forgot-password"
                   className="text-sm font-medium hover:underline text-blue-500"
                 >
                   Forgot password?
                 </a>
-              </div>
+              </div> */}
               <button type="submit" className="w-full primarybtn">
                 Sign in
               </button>
