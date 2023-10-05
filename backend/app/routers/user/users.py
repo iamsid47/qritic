@@ -1,5 +1,4 @@
 from fastapi import APIRouter, HTTPException, Depends
-from fastapi.middleware.cors import CORSMiddleware
 from pymongo import MongoClient
 from argon2 import PasswordHasher, exceptions
 from pydantic import BaseModel
@@ -111,9 +110,6 @@ def login(user_data: UserLogin):
             "jobTitle": user["jobTitle"],
         }
         }
-
-
-
 
 from fastapi.security import OAuth2PasswordBearer
 from typing import Optional
