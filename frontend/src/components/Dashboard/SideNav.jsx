@@ -78,7 +78,7 @@ const SideNav = () => {
                 </svg>
                 <span className="flex-1 ml-3 whitespace-nowrap">History</span>
                 <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium  rounded-full bg-gray-700 text-gray-300">
-                  Pro
+                  Soon
                 </span>
               </a>
             </li>

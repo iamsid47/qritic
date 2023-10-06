@@ -1,6 +1,7 @@
 import React from "react";
 
 const Footer = () => {
+  const appVersion = process.env.REACT_APP_VERSION;
   return (
     <footer className="px-4 lg:px-12 mx-12 py-16 divide-y space-y-11 bg-[#222222] text-gray-100 ">
       <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0 ">
@@ -83,7 +84,7 @@ const Footer = () => {
 
           <div className="space-y-3">
             <div className="uppercase font-bold text-gray-50 text-md">
-              Social media
+              let them know
             </div>
             <div className="flex justify-start space-x-3">
               <a
@@ -140,6 +141,9 @@ const Footer = () => {
           Kulthe Media, Limited
         </span>
         . All rights reserved.
+        <div className="py-6 text-xs text-gray-400 text-right">
+          build {appVersion}
+        </div>
       </div>
     </footer>
   );

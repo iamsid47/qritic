@@ -20,17 +20,20 @@ const Hero = () => {
           <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
             <div>
               <a
-                href="/playground"
+                href="/why"
                 className="text-base font-semibold tracking-tight text-black hover:text-blue-600 uppercase rounded-full px-4 py-3 bg-white hover:bg-gray-200 inline transition duration-300"
               >
                 Try Playground &rarr;
               </a>
-              <h1 className="mt-4  font-bold text-white lg:mt-8 text-4xl md:text-7xl tracking-tight">
+              <h1 className="mt-4  font-bold text-white lg:mt-8 text-4xl md:text-6xl tracking-tight">
                 Recruiters receive{" "}
-                <span className="underline underline-offset-8 font-extrabold">
+                <span className="font-extrabold text-sky-200 italic mr-1">
                   thousands
                 </span>{" "}
-                of resumes everyday
+                of resumes{" "}
+                <span className="text-red-200 bg-red-600 px-3  rounded-lg">
+                  everyday
+                </span>
               </h1>
               <p className="mt-6 mb-10 text-base text-white lg:mt-8 sm:text-xl max-w-md">
                 We're stepping in to save you a{" "}

@@ -3,7 +3,7 @@ import { useAuth } from "../Auth/AuthContext";
 import "../../Global.css";
 
 const navItems = [
-  { text: "Why", link: "/why-qritic" },
+  { text: "Why", link: "/why" },
   { text: "Playground", link: "/playground" },
   { text: "Pricing", link: "/pricing" },
   { text: "Let's Talk", link: "/contact" },

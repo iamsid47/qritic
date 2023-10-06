@@ -9,6 +9,7 @@ import Billing from "./components/Dashboard/Billing";
 import History from "./components/Dashboard/History";
 import Contact from "./components/Pages/Contact";
 import Pricing from "./components/Pages/Pricing";
+import WhyQritic from "./components/Pages/WhyQritic";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/dashboard/billing" element={<Billing />} />
         <Route path="/dashboard/history" element={<History />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/why" element={<WhyQritic />} />
       </Routes>
     </BrowserRouter>
   );
