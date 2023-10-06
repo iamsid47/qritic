@@ -6,12 +6,14 @@ import Results from "./utils/Results";
 import Layout from "./Layout";
 
 const Dash = () => {
+  const handleFile = (file) => {
+    console.log("File uploaded:", file);
+  };
   return (
     <Layout>
       <section>
         <Alert />
-        <CheckSimilarity />
-        <Results />
+        <CheckSimilarity handleFile={handleFile} /> <Results />
       </section>
     </Layout>
   );

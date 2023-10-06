@@ -9,8 +9,12 @@ const Alert = () => {
     <section>
       {hidden ? null : (
         <div className="w-full bg-gray-950 py-1 rounded my-4 flex justify-between items-center">
-          <h1 className="text-md text-white text-center py-1 col-span-2 mx-5 font-semibold">
-            More exciting features coming soon!
+          <h1 className="text-md text-white text-left py-1 col-span-2 mx-5 font-light max-w-4xl">
+            Note: We've set up Rate Limits to each account for safety purposes.
+            You can <span className="font-bold">upload upto 20 resumes</span>{" "}
+            (.pdf format without images) and{" "}
+            <span className="font-bold">1 job description per check</span>, and
+            upto 5 checks per day. This limit will be removed soon.
           </h1>
           <button className="dangerbtn mx-5 py-1" onClick={handleClose}>
             <svg
