@@ -142,7 +142,7 @@ const Footer = () => {
         </span>
         . All rights reserved.
         <div className="py-6 text-xs text-gray-400 text-right">
-          build {appVersion}
+          alpha build {appVersion}
         </div>
       </div>
     </footer>
