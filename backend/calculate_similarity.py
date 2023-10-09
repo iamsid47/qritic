@@ -109,9 +109,8 @@ from nltk.metrics.distance import edit_distance
 from scipy.spatial.distance import euclidean
 from simhash import Simhash
 
-# Load models and resources
 nlp_spacy = spacy.load("en_core_web_lg")
-nlp2 = spacy.load("/home/sid/Documents/stuff/cvner/archive/output/model-best")
+nlp2 = spacy.load("/home/sid/Documents/stuff/cvner/archive/output/model-last")
 model_sentence_transformer = SentenceTransformer('LaBSE')
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -138,7 +137,7 @@ def calculate_bert_similarity(text1, text2):
 def calculate_spacy_similarity(text1, text2):
     doc1 = nlp_spacy(text1)
     doc2 = nlp_spacy(text2)
-    similarity_score = doc1.similarity(doc2)
+    similarity_score = doc2.similarity(doc1)
     return similarity_score
 
 def calculate_simhash_similarity(text1, text2):
@@ -148,8 +147,6 @@ def calculate_simhash_similarity(text1, text2):
     return similarity
 
 def extract_ner_from_cvs(cv_texts):
-    
-    
     ner_results = []
     for cv_text in cv_texts:
         doc = nlp2(cv_text)

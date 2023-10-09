@@ -46,8 +46,9 @@ const Benefits = () => {
             <h1 className=" lg:text-7xl text-6xl font-bold tracking-tight text-gray-900 text-center">
               Extremely{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900">
-                fast & accurate rankings.
-              </span>
+                fast & accurate
+              </span>{" "}
+              rankings
             </h1>
             <p className="mt-6 text-md text-gray-600 max-w-lg text-center">
               Qritic offers a number of benefits that can help us provide
