@@ -11,7 +11,7 @@ const CTA = () => {
               <span className="text-green-200 bg-green-600 px-3 rounded-lg">
                 save
               </span>{" "}
-              hell lot of ⌚ ?
+              a hell lot of ⌚ ?
             </h1>
             <p className="mb-8 lg:mb-6 text-gray-600  md:text-lg">
               Try <strong>Qritic</strong> for free. No credit card required.

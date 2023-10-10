@@ -39,8 +39,9 @@ const Content = () => {
               Accuracy? Oh it's 92.67% and improving
             </h1>
             <p className="mb-4 text-md font-medium">
-              We are strategists, designers and developers. Innovators and
-              problem solvers. Small enough to be simple and quick.
+              We are strategists, innovators, and developers. We wanna make sure
+              that you get the best of all. That is why we're continuously
+              improving Qritic to get you the best.
             </p>
           </div>
           <div className="mt-0">
@@ -54,11 +55,13 @@ const Content = () => {
         <div className="gap-10  py-8 px-4 max-w-xl flex flex-col-reverse lg:py-16 lg:px-6 bg-fuchsia-200 rounded-3xl shadow-xl">
           <div className="font-light px-6 sm:text-lg text-rose-500 order-last">
             <h1 className="mb-4 text-6xl tracking-tight lg:text-5xl font-extrabold  text-rose-500">
-              Get the best candidate for your team
+              Leave the herd & get the best candidate for your team
             </h1>
             <p className="mb-4 text-md font-medium">
-              We are strategists, designers and developers. Innovators and
-              problem solvers. Small enough to be simple and quick.
+              Everybody likes an employee that does something out of the box.
+              That <span className="font-bold">knows</span> what needs to be
+              done. As if they've got that magic within them! Well, we're here
+              just to find that!
             </p>
           </div>
           <div className="mt-0">

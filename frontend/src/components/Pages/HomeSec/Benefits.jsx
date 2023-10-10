@@ -8,28 +8,28 @@ import {
 
 const features = [
   {
-    name: "Available 24/7",
+    name: "Detailed Results within 30 Minutes",
     description:
-      "Qritic is available 24/7, which means you can get the support you need at any time of the day or night, even outside of regular business hours.",
-    icon: ChatBubbleBottomCenterIcon,
-  },
-  {
-    name: "Instant Response",
-    description:
-      "With Qritic, you can get instant responses to your queries, without having to wait on hold or for a support rep to get back to you. This can save you time and make the support process more efficient.",
+      "With Qritic, you get detailed review of each candidate. It's not just a score. It's a biography. And you get to pick the best one.",
     icon: BoltIcon,
   },
   {
     name: "Out of the box Accuracy",
     description:
-      "Our AI-powered chatbot is designed to provide accurate responses to queries, drawing on a wealth of information about our products and services.",
+      "Our AI-powered model is designed to provide accurate rankings by drawing on a wealth of information about every resume and understanding what matters most.",
     icon: ChevronDoubleUpIcon,
   },
   {
     name: "Cost Effective",
     description:
-      "Since Qritic is an AI-powered chatbot, we can provide support to customers at a lower cost than we could with a team of support reps.",
+      "Since running Qritic costs less, and we love you as well, we have decided to keep things lower than the current market prices so that you can take full advantage for Qritic.",
     icon: CurrencyDollarIcon,
+  },
+  {
+    name: "At your service. Day & Night",
+    description:
+      "Qritic is available 24/7, which means you can rank your candidates at any time of the day or night. Will an HR do that for you at 12 AM? Well, Qritic can!",
+    icon: ChatBubbleBottomCenterIcon,
   },
 ];
 

@@ -17,7 +17,7 @@ export default function Contact() {
           </p>
         </div>
         <form
-          action="#"
+          action="https://formspree.io/f/mzblybyr"
           method="POST"
           className="mx-auto mt-16 max-w-xl sm:mt-20"
         >
@@ -31,6 +31,7 @@ export default function Contact() {
               </label>
               <div className="mt-2.5">
                 <input
+                  required
                   type="text"
                   name="first-name"
                   id="first-name"
@@ -49,6 +50,7 @@ export default function Contact() {
               </label>
               <div className="mt-2.5">
                 <input
+                  required
                   type="text"
                   name="last-name"
                   id="last-name"
@@ -67,6 +69,7 @@ export default function Contact() {
               </label>
               <div className="mt-2.5">
                 <input
+                  required
                   type="text"
                   name="company"
                   id="company"
@@ -85,6 +88,7 @@ export default function Contact() {
               </label>
               <div className="mt-2.5">
                 <input
+                  required
                   type="email"
                   name="email"
                   id="email"
@@ -103,6 +107,7 @@ export default function Contact() {
               </label>
               <div className="mt-2.5">
                 <input
+                  required
                   type="tel"
                   name="phone"
                   id="phone"
