@@ -3,43 +3,40 @@ import React from "react";
 const Content = () => {
   return (
     <section className="py-16 bg-white flex flex-col space-y-12">
-      <section className="">
+      <section className="mx-4">
         <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6 bg-amber-300 rounded-3xl shadow-xl">
           <div className="font-light px-6 sm:text-lg text-orange-900">
             <h1 className="mb-8 text-6xl tracking-tight lg:text-5xl font-extrabold  text-orange-800">
-              We didn't reinvent the wheel
+              We did not reinvent the wheel, we made it{" "}
+              <span className="underline underline-offset-4">better</span>.
             </h1>
             <p className="mb-4 text-md font-medium">
-              We are strategists, designers and developers. Innovators and
-              problem solvers. Small enough to be simple and quick, but big
-              enough to deliver the scope you want at the pace you need. Small
-              enough to be simple and quick, but big enough to deliver the scope
-              you want at the pace you need.
+              Everybody knows that there are other players in this market. Your
+              company knows too! But what you don't know is that Qritic is{" "}
+              <span className="font-bold text-xl">10x more effective</span> and
+              faster than what other ranking apps are doing.
             </p>
-            <p className="text-md font-medium">
-              We are strategists, designers and developers. Innovators and
-              problem solvers. Small enough to be simple and quick.
-            </p>
+            <a
+              href="/signup"
+              className="text-xl font-medium underline underline-offset-4 hover:no-underline"
+            >
+              Give it a shot &rarr;
+            </a>
           </div>
-          <div className="grid grid-cols-2 gap-4 mt-8">
+          <div className="gap-4 mt-8 bg-black rounded-xl">
             <img
-              className="w-full rounded-xl shadow-xl"
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
+              className="w-full rounded-xl shadow-2xl opacity-70"
+              src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1926&q=80"
               alt="office content 1"
-            />
-            <img
-              className="mt-4 w-full lg:mt-10 rounded-xl shadow-xl"
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
-              alt="office content 2"
             />
           </div>
         </div>
       </section>
-      <section className="flex justify-center space-x-12">
+      <section className="flex-col space-x-0 space-y-12 flex justify-center md:space-x-12 md:space-y-0 md:flex-row mx-4">
         <div className="gap-10  py-8 px-4 max-w-xl flex flex-col-reverse lg:py-16 lg:px-6 bg-blue-800 rounded-3xl shadow-xl">
           <div className="font-light px-6 sm:text-lg text-pink-300 order-last">
             <h1 className="mb-4 text-6xl tracking-tight lg:text-5xl font-extrabold  text-pink-300">
-              We didn't reinvent the wheel
+              Accuracy? Oh it's 92.67% and improving
             </h1>
             <p className="mb-4 text-md font-medium">
               We are strategists, designers and developers. Innovators and
@@ -57,7 +54,7 @@ const Content = () => {
         <div className="gap-10  py-8 px-4 max-w-xl flex flex-col-reverse lg:py-16 lg:px-6 bg-fuchsia-200 rounded-3xl shadow-xl">
           <div className="font-light px-6 sm:text-lg text-rose-500 order-last">
             <h1 className="mb-4 text-6xl tracking-tight lg:text-5xl font-extrabold  text-rose-500">
-              We didn't reinvent the wheel
+              Get the best candidate for your team
             </h1>
             <p className="mb-4 text-md font-medium">
               We are strategists, designers and developers. Innovators and
