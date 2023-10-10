@@ -2,8 +2,8 @@ import React from "react";
 
 const CTA = () => {
   return (
-    <section>
-      <section className="bg-white ">
+    <section className="bg-white">
+      <section className="bg-white pt-12">
         <div className="pt-8 pb-16 px-4 mx-auto max-w-3xl lg:px-6">
           <div className="mx-auto text-center">
             <h1 className=" mb-4 text-4xl md:text-5xl xl:text-6xl tracking-tight font-extrabold py-2">

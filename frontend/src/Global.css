@@ -10,5 +10,5 @@
 }
 
 .submitbtn {
-  @apply text-white bg-gray-900 hover:bg-gray-300 hover:text-black focus:ring-4 focus:ring-blue-300 font-medium rounded  px-4 py-3  mb-2 transition duration-300;
+  @apply text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-blue-300 font-medium rounded  px-4 py-3  mb-2 transition duration-300;
 }
