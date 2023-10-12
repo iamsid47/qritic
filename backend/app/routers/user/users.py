@@ -41,19 +41,19 @@ def read_root():
 
 
 @router.post("/signup")
-def create_user_account(user: UserInCreate):
+async def create_user_account(user: UserInCreate):
     user_data = {
-        "username" : user.username,
+        "username": user.username,
         "email": user.email,
         "password": User(user.username, user.email, user.password, user.company, user.jobTitle).password_hash,
         "company": user.company,
         "jobTitle": user.jobTitle
     }
 
-    result = collection.insert_one(user_data)
+    result = await collection.insert_one(user_data)  # Use await here
 
     if result.inserted_id:
-        user_details = collection.find_one({"email": user.email})
+        user_details = await collection.find_one({"email": user.email})  # Use await here
         return {
             "message": "User created successfully",
             "userID": str(result.inserted_id),
@@ -65,6 +65,7 @@ def create_user_account(user: UserInCreate):
     
     else:
         raise HTTPException(status_code=500, detail="Failed to create user")
+
     
 class UserLogin(BaseModel):
     email: str
