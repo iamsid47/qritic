@@ -51,7 +51,7 @@ async def check_server():
     return {"status": "success", "message": "server is working"}
 
 @router.post("/check_similarity")
-def check_similarity(job_description: UploadFile = File(...), resume_files: List[UploadFile] = File(...)):
+async def check_similarity(job_description: UploadFile = File(...), resume_files: List[UploadFile] = File(...)):
     start_time = time.time()
     os.environ["CUDA_VISIBLE_DEVICES"] = ""
     try:
