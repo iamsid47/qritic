@@ -9,8 +9,9 @@ if __name__ == "__main__":
     uvicorn.run(
         "app:app",
         host="0.0.0.0",
-        port=443, 
-        ssl_keyfile="/etc/letsencrypt/live/backend.getqritic.com/privkey.pem",  
-        ssl_certfile="/etc/letsencrypt/live/backend.getqritic.com/fullchain.pem",  
-        reload=True
+        port=443,
+        ssl_keyfile="/etc/letsencrypt/live/backend.getqritic.com/privkey.pem",
+        ssl_certfile="/etc/letsencrypt/live/backend.getqritic.com/fullchain.pem",
+        reload=True,
+        root_path="/",
     )

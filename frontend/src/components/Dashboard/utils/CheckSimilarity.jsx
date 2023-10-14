@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import axios from "axios";
+import { reqURL } from "../../../constants";
 
 const CheckSimilarity = ({ handleFile, handleResults }) => {
   const resumeFileInputRef = useRef(null);
@@ -58,7 +59,7 @@ const CheckSimilarity = ({ handleFile, handleResults }) => {
       }
 
       const response = await axios.post(
-        "http://localhost:8000/app/check_similarity",
+        `${reqURL}app/check_similarity`,
         formData,
         {
           headers: {
