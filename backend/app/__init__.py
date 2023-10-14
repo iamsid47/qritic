@@ -16,6 +16,8 @@ origins = [
     "http://localhost:3000", 
     "https://qritic-git-main-iamsid47.vercel.app",
     "https://2161-3-93-58-17.ngrok-free.app",
+    "https://backend.getqritic.com/",
+    "https://getqritic.com/",
     "*"
 ]
 
