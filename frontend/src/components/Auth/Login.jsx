@@ -20,7 +20,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(`${reqURL}user/login`, {
+      const response = await axios.post(`${reqURL}/user/login`, {
         email: email,
         password: password,
       });
