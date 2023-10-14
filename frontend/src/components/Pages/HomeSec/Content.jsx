@@ -1,4 +1,7 @@
 import React from "react";
+import wheelImg from "../../../assets/Electrical Engineers_wheel.png";
+import accuImg from "../../../assets/precision.png";
+import bestMatchImg from "../../../assets/bestmatch.png";
 
 const Content = () => {
   return (
@@ -23,10 +26,10 @@ const Content = () => {
               Give it a shot &rarr;
             </a>
           </div>
-          <div className="gap-4 mt-8 bg-black rounded-xl">
+          <div className="gap-4 mt-8 bg-white rounded-xl">
             <img
-              className="w-full rounded-xl shadow-2xl opacity-70"
-              src="https://images.unsplash.com/photo-1624594593821-c6fdf3ea69ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80"
+              className="w-full rounded-xl shadow-2xl"
+              src={wheelImg}
               alt="office content 1"
             />
           </div>
@@ -46,8 +49,8 @@ const Content = () => {
           </div>
           <div className="mt-0">
             <img
-              className=" rounded-3xl shadow-xl"
-              src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1926&q=80"
+              className=" rounded-3xl "
+              src={accuImg}
               alt="office content 1"
             />
           </div>
@@ -66,8 +69,8 @@ const Content = () => {
           </div>
           <div className="mt-0">
             <img
-              className=" rounded-3xl shadow-xl "
-              src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1926&q=80"
+              className=" rounded-3xl "
+              src={bestMatchImg}
               alt="office content 1"
             />
           </div>
