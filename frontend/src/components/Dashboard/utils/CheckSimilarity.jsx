@@ -59,7 +59,7 @@ const CheckSimilarity = ({ handleFile, handleResults }) => {
       }
 
       const response = await axios.post(
-        `${reqURL}app/check_similarity`,
+        `${reqURL}/app/check_similarity`,
         formData,
         {
           headers: {
