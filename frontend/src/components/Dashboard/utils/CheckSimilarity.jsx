@@ -10,7 +10,7 @@ const CheckSimilarity = ({ handleFile, handleResults }) => {
   const maxResumeFileCount = 20;
 
   const [results, setResults] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [selectedNERIndex, setSelectedNERIndex] = useState(-1);
   const [showResults, setShowResults] = useState(false);
 
