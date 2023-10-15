@@ -52,6 +52,7 @@ const CheckSimilarity = ({ handleFile, handleResults }) => {
   const handleUpload = async () => {
     alert("Request sent successfully. Wait for some time.");
     try {
+      setLoading(true);
       const formData = new FormData();
       formData.append("job_description", jobDescriptionFile);
       for (const resumeFile of resumeFileInputRef.current.files) {
