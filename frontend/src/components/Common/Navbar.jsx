@@ -23,8 +23,8 @@ const Navbar = () => {
       <nav className="border-gray-200 bg-gray-950">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-6">
           <a href="/" className="flex items-center">
-            <h1 className="self-center text-3xl font-bold whitespace-nowrap bg-sky-400 bg-clip-text text-transparent">
-              qritic
+            <h1 className="self-center text-3xl font-bold whitespace-nowrap bg-sky-400 bg-clip-text text-transparent logo">
+              Qritic
             </h1>
           </a>
           <button

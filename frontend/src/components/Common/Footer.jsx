@@ -11,8 +11,8 @@ const Footer = () => {
             href="/"
             className="flex justify-center space-x-3 lg:justify-start"
           >
-            <h1 className="self-center text-4xl md:text-6xl font-semibold bg-sky-400 bg-clip-text text-transparent">
-              qritic
+            <h1 className="self-center text-4xl md:text-6xl font-semibold bg-sky-400 bg-clip-text text-transparent logo tracking-tight">
+              Qritic
             </h1>
           </a>
           <div>
