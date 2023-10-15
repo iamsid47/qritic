@@ -16,7 +16,7 @@ const Hero = () => {
       style={backgroundStyle}
     >
       <section className=" py-10 sm:py-16 lg:py-32 mx-3 md:mx-0">
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="px-4 mx-4 max-w-7xl sm:px-6 lg:px-8">
           <div className="flex flex-col justify-center items-center text-center space-y-8 lg:space-y-10">
             {/* <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2"> */}
 
