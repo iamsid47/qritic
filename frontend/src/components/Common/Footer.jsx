@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   const appVersion = process.env.REACT_APP_VERSION;
   return (
-    <footer className="px-4 lg:px-12 mx-12 py-16 divide-y space-y-11 bg-[#222222] text-gray-100 ">
+    <footer className=" lg:px-12 px-12 py-16 divide-y space-y-11 bg-[#111] text-gray-100 ">
       <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0 ">
         <div className="lg:w-1/3 py-5">
           <a
@@ -16,7 +16,7 @@ const Footer = () => {
             </h1>
           </a>
           <div>
-            <h1 className="pt-1.5 text-xl italic text-gray-300 text-center md:text-left">
+            <h1 className="pt-1.5 text-lg md:text-xl italic text-gray-300 text-center md:text-left">
               Resume ranking for HR nerds
             </h1>
           </div>
@@ -30,7 +30,7 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="/"
+                  href="/playground"
                   className="hover:underline"
                 >
                   Playground
@@ -39,7 +39,7 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="/"
+                  href="/pricing"
                   className="hover:underline"
                 >
                   Pricing
@@ -48,10 +48,10 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="/"
+                  href="/contact"
                   className="hover:underline"
                 >
-                  FAQ
+                  Let's Talk
                 </a>
               </li>
             </ul>
@@ -64,7 +64,7 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="/"
+                  href="/privacy"
                   className="hover:underline"
                 >
                   Privacy
@@ -73,10 +73,10 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="/"
+                  href="/terms"
                   className="hover:underline"
                 >
-                  Terms of Service
+                  Terms
                 </a>
               </li>
             </ul>
@@ -135,7 +135,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="py-6 text-sm text-center text-gray-100">
+      <div className="py-6 text-xs text-center text-gray-100">
         &copy; 2023{" "}
         <span className="underline underline-offset-8">
           Kulthe Media, Limited

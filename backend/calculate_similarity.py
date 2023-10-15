@@ -110,8 +110,8 @@ from scipy.spatial.distance import euclidean
 from simhash import Simhash
 
 nlp_spacy = spacy.load("en_core_web_lg")
-# nlp2 = spacy.load("/home/sid/Documents/stuff/cvner/archive/output/model-best")
-nlp2 = spacy.load("/home/ubuntu/archive/output/model-best")
+nlp2 = spacy.load("/home/sid/Documents/stuff/cvner/archive/output/model-best")
+# nlp2 = spacy.load("/home/ubuntu/archive/output/model-best")
 model_sentence_transformer = SentenceTransformer('LaBSE')
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 

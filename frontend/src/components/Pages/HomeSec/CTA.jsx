@@ -6,7 +6,7 @@ const CTA = () => {
       <section className="bg-white pt-12">
         <div className="pt-8 pb-16 px-4 mx-auto max-w-3xl lg:px-6">
           <div className="mx-auto text-center">
-            <h1 className=" mb-4 text-4xl md:text-5xl xl:text-6xl tracking-tight font-extrabold py-2">
+            <h1 className=" mb-4 text-5xl xl:text-6xl tracking-tight font-extrabold py-2">
               So, would you like to{" "}
               <span className="text-green-200 bg-green-600 px-3 rounded-lg">
                 save

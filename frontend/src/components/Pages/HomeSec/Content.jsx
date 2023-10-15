@@ -9,7 +9,7 @@ const Content = () => {
       <section className="mx-4">
         <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6 bg-amber-300 rounded-3xl shadow-xl">
           <div className="font-light px-6 sm:text-lg text-orange-900">
-            <h1 className="mb-8 text-6xl tracking-tight lg:text-5xl font-extrabold  text-orange-800">
+            <h1 className="mb-8  tracking-tight text-5xl font-extrabold  text-orange-800">
               We did not reinvent the wheel, we made it{" "}
               <span className="underline underline-offset-4">better</span>.
             </h1>
@@ -38,7 +38,7 @@ const Content = () => {
       <section className="flex-col space-x-0 space-y-12 flex justify-center md:space-x-12 md:space-y-0 md:flex-row mx-4">
         <div className="gap-10  py-8 px-4 max-w-xl flex flex-col-reverse lg:py-16 lg:px-6 bg-blue-800 rounded-3xl shadow-xl">
           <div className="font-light px-6 sm:text-lg text-pink-300 order-last">
-            <h1 className="mb-4 text-6xl tracking-tight lg:text-5xl font-extrabold  text-pink-300">
+            <h1 className="mb-4  tracking-tight text-5xl font-extrabold  text-pink-300">
               Accuracy? Oh it's 92.67% and improving
             </h1>
             <p className="mb-4 text-md font-medium">
@@ -57,7 +57,7 @@ const Content = () => {
         </div>
         <div className="gap-10  py-8 px-4 max-w-xl flex flex-col-reverse lg:py-16 lg:px-6 bg-fuchsia-200 rounded-3xl shadow-xl">
           <div className="font-light px-6 sm:text-lg text-rose-500 order-last">
-            <h1 className="mb-4 text-6xl tracking-tight lg:text-5xl font-extrabold  text-rose-500">
+            <h1 className="mb-4  tracking-tight text-5xl font-extrabold  text-rose-500">
               Leave the herd & get the best candidate for your team
             </h1>
             <p className="mb-4 text-md font-medium">

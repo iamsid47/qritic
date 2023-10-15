@@ -40,10 +40,10 @@ const Benefits = () => {
       <div className="bg-white py-12">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-5xl lg:text-center flex flex-col justify-center items-center">
-            <h2 className="text-base font-semibold leading-7 text-teal-200 bg-teal-600 px-3 rounded-lg uppercase mb-4 lg:mb-8">
+            <h2 className="text-base font-semibold leading-7 text-teal-100 bg-teal-600 px-3 rounded-lg uppercase mb-4 lg:mb-8">
               Benefits
             </h2>
-            <h1 className=" lg:text-7xl text-6xl font-bold tracking-tight text-gray-900 text-center">
+            <h1 className=" lg:text-7xl text-4xl md:text-5xl font-bold tracking-tight text-gray-900 text-center">
               Extremely{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900">
                 fast & accurate
