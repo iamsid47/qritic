@@ -12,7 +12,7 @@ from werkzeug.utils import secure_filename
 from pdfplumber import open as pdf_open
 from typing import List
 import time
-# from calculate_similarity import extract_ner_from_cvs
+from calculate_similarity import extract_ner_from_cvs
 from calculate_similarity import calculate_tfidf_similarity, calculate_sentence_transformer_similarity, calculate_levenshtein_similarity, calculate_bert_similarity as calculate_euclidean_similarity, calculate_spacy_similarity, calculate_simhash_similarity
 
 nltk.download('punkt')
@@ -152,14 +152,18 @@ async def check_similarity(job_description: UploadFile = File(...), resume_files
 
             })
         
-        # ner_results = extract_ner_from_cvs(cv_texts)
+        ner_results = extract_ner_from_cvs(cv_texts)
+
+        print(result)
+
+        
 
         result.sort(key=lambda x: x['ensemble_score'], reverse=True)
 
         
         ranked_result = []
-        # for rank, (data, ner_result) in enumerate(zip(result, ner_results), start=1):
-        for rank, (data) in enumerate(zip(result), start=1):
+        for rank, (data, ner_result) in enumerate(zip(result, ner_results), start=1):
+        # for rank, (data) in enumerate(zip(result), start=1):
             ranked_result.append({
                 'rank': rank,
                 'resume_filename': data['resume_filename'],
@@ -169,7 +173,7 @@ async def check_similarity(job_description: UploadFile = File(...), resume_files
 
 
         end_time = time.time()
-
+    
         resp_time = end_time - start_time
         print("Response Time: ", resp_time)
         return JSONResponse(content={'result': ranked_result}, status_code=200)
