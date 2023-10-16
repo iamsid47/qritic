@@ -19,10 +19,9 @@ const Hero = () => {
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex flex-col justify-center items-center text-center space-y-8 lg:space-y-10">
             {/* <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2"> */}
-
             <a
               href="/why"
-              className="text-xs font-semibold tracking-tight text-black hover:text-blue-600 uppercase rounded-full px-4 py-1.5 bg-white hover:bg-gray-200 inline transition duration-300"
+              className="text-xs font-semibold tracking-tight text-black hover:text-blue-600 uppercase rounded-full px-4 py-1.5 bg-white hover:bg-gray-200  transition duration-300"
             >
               Try Playground &rarr;
             </a>
